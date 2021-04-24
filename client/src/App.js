@@ -12,6 +12,7 @@ import KingsCupAcc from './pages/GPKingsCup'
 import BeerPongAcc from './pages/GPBeerPong'
 import QuartersAcc from './pages/GPQuarters'
 import FlipcupAcc from './pages/GPFlipCup'
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import BGHeader from './Components/Header'
 import SideBar from './Components/SideBar.js'
@@ -27,13 +28,12 @@ export default function CenteredGrid() {
   return (
   <Router >  
 
-   <div className="App-Header"> 
-   
+   <div className="App-header"> 
+          <BGHeader />
        <div className={classes.root}> 
-      
-   
-            
           
+     
+          <CssBaseline />
     
           
             
