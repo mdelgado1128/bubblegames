@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 // import SignInCard from './pages/Login'
-import BGLogo from "./Components/Logo";
+// import BGLogo from "./Components/Logo";
 import Kings from './pages/GPKingsCup';
-import Quarters from "./pages/GPQuarters";
+// import Quarters from "./pages/GPQuarters";
 import Login from "./pages/Login";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
