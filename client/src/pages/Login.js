@@ -88,7 +88,7 @@ function handleSignIn(event) {
      } else {
        localStorage.setItem("token",res.data.token)
        setLogin(true);
-      history.push("/Kingscup")
+      history.push("/")
 
      }
       
@@ -129,7 +129,6 @@ console.log(res)
   return (
       
    <div className="App-header"> 
-   <BGLogo />
     
     <div className={classes.root}> 
 

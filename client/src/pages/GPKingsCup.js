@@ -73,7 +73,6 @@ export default function KingsCupAcc(props) {
 
   return (
     <div>
-      <BGLogo />
       <Accordion
         square
         expanded={expanded === "panel1"}
