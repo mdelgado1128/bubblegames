@@ -88,7 +88,7 @@ function handleSignIn(event) {
      } else {
        localStorage.setItem("token",res.data.token)
        setLogin(true);
-      history.push("/Kingscup")
+      history.push("/")
 
      }
       

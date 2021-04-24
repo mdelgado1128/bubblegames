@@ -7,7 +7,14 @@ import Kings from './pages/GPKingsCup';
 // import Quarters from "./pages/GPQuarters";
 import Login from "./pages/Login";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import GamesButtons from './pages/GamesButtons'
+import KingsCupAcc from './pages/GPKingsCup'
+import BeerPongAcc from './pages/GPBeerPong'
+import QuartersAcc from './pages/GPQuarters'
+import FlipcupAcc from './pages/GPFlipCup'
+import Grid from '@material-ui/core/Grid';
+import BGHeader from './Components/Header'
+import SideBar from './Components/SideBar.js'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -20,21 +27,44 @@ export default function CenteredGrid() {
   return (
   <Router >  
 
-   <div className="App"> 
+   <div className="App-Header"> 
    
        <div className={classes.root}> 
-  
-     
+      
+   
+            
+          
+    
+          
+            
+            <Switch>
+              <Route exact path="/Login">
+                <Login />
+              </Route>
+              <Route exact path="/">
+                <GamesButtons/>
+              </Route>
+              <Route exact path="/KingsCup">
+                  <KingsCupAcc />
+              </Route>
+              <Route exact path="/FlipCup">
+                  <FlipcupAcc />
+              </Route>
+              <Route exact path="/Quarters">
+                  <QuartersAcc />
+              </Route>
+              <Route path="/BeerPong">
+                  <BeerPongAcc />
+              </Route>
+            </Switch>
+            
+          
+            
 
+         
+        
       </div>
     </div>  
-
-
-
-  <Switch>
-    <Route  exact path="/" component={Login} />
-    <Route exact path="/Kingscup" component={Kings} />
-  </Switch>
 </Router>
 
 
