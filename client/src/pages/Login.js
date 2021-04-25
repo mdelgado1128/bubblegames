@@ -17,6 +17,7 @@ import API from "../utils/API";
 import { useHistory } from "react-router-dom"
 import BGLogo from "../Components/Logo";
 // import { Divider } from '@material-ui/core';
+import '../App.css';
 
 
 
@@ -128,7 +129,7 @@ console.log(res)
 
   return (
       
-   <div className="App-header"> 
+   <div className="App-header">
    <BGLogo />
     
     <div className={classes.root}> 
