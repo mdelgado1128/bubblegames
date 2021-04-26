@@ -6,8 +6,12 @@ import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 // import { propTypes } from "react-bootstrap/esm/Image";
+import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+
+
 import Grid from "@material-ui/core/Grid";
+
 
 const Accordion = withStyles({
   root: {
@@ -52,16 +56,16 @@ const AccordionDetails = withStyles((theme) => ({
 
 export default function KingsCupAcc(props) {
   const [expanded, setExpanded] = React.useState("panel1");
-
+  let history = useHistory();
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      props.history.push("/");
+      history.push("/Login");
     }
     function userAuth(event) {
       API.checkAuth().then((res) => {
         console.log(res);
         if (!res.data) {
-          return props.history.push("/");
+          return history.push("/Login");
         }
       });
     }

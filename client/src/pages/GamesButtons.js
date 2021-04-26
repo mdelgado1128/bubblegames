@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 // import CardActions from '@material-ui/core/CardActions';
@@ -9,6 +9,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import { CardActionArea } from '@material-ui/core';
 import BGLogo from "../Components/Logo";
+import API from "../utils/API";
+import { useHistory } from "react-router-dom";
 // import ButtonPageStepper from "../Components/Stepper";
 import {
   Link
@@ -44,8 +46,28 @@ const BlackTextTypography = withStyles({
     }
   })(Typography);
 
-export default function GamesButtons() {
+export default function GamesButtons(props) {
   const classes = UseStyles();
+
+  let history = useHistory();
+
+
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      history.push("/Login");
+    }
+    function userAuth(event) {
+      API.checkAuth().then((res) => {
+        console.log(res);
+        if (!res.data) {
+          return history.push("/Login");
+        }
+      });
+    }
+    userAuth();
+  }, );
+
+
 
   return (
   
