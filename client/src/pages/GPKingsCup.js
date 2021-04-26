@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import BGLogo from "../Components/Logo";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";

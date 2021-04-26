@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import { CardActionArea } from '@material-ui/core';
-import BGLogo from "../Components/Logo";
 import "../styles/GamesButtons.css";
 import API from "../utils/API";
 import { useHistory } from "react-router-dom";

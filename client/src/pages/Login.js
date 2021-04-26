@@ -119,7 +119,7 @@ function handleSignIn(event) {
 
   return (
       
-   <div className="App-header"> 
+   <div className="App"> 
     
     <div className={classes.root}> 
 
