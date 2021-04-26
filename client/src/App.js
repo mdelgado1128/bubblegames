@@ -20,15 +20,24 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  particlesBg: {
+    zIndex: -1,
+    position: "fixed",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0
+  }
 }));
 
-export default function CenteredGrid() {
+export default function App() {
   const classes = useStyles();
 
   return (
     <Router >
+      <div className={classes.particlesBg}>
       <ParticlesBg type="circle" bg={true} />
-
+      </div>
       <div>
 
         <div className={classes.root}>
@@ -62,6 +71,7 @@ export default function CenteredGrid() {
 
         </div>
       </div>
+     
     </Router>
 
 

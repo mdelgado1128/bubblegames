@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import BGLogo from "../Components/Logo";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
@@ -8,7 +8,16 @@ import Typography from "@material-ui/core/Typography";
 // import { propTypes } from "react-bootstrap/esm/Image";
 import API from "../utils/API";
 import Grid from "@material-ui/core/Grid";
-
+const useStyles = makeStyles((theme) => ({
+  particlesBg: {
+    zIndex: -1,
+    position: "fixed",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0
+  }
+}));
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -73,6 +82,7 @@ export default function KingsCupAcc(props) {
   };
 
   return (
+    
     <div className="App-header">
       <BGLogo />
       <Grid container direction="column" spacing={2} alignItems=''>

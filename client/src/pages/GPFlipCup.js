@@ -1,11 +1,22 @@
 import React from 'react';
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
+import ParticlesBg from "particles-bg";
+const useStyles = makeStyles((theme) => ({
+  particlesBg: {
+    zIndex: -1,
+    position: "fixed",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0
+  }
+}));
 
 const Accordion = withStyles({
   root: {
@@ -55,10 +66,11 @@ export default function FlipCupAcc() {
     setExpanded(newExpanded ? panel : false);
   };
 
-  return (
-    <div className="App-header">
-      <BGLogo />
-       <Grid container direction="column" spacing={2}>
+  return (    
+  
+<div>
+ <BGLogo />
+       <Grid container direction="column">
       <Grid item xs={12}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
@@ -95,6 +107,8 @@ export default function FlipCupAcc() {
       </Accordion>
       </Grid>
       </Grid>
+      
     </div>
+    
   )
 };

@@ -9,6 +9,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import { CardActionArea } from '@material-ui/core';
 import BGLogo from "../Components/Logo";
+import "../styles/GamesButtons.css";
 // import ButtonPageStepper from "../Components/Stepper";
 import {
   Link
@@ -49,7 +50,7 @@ export default function GamesButtons() {
 
   return (
   
-    <div>
+    <div className wrapper>
         <Grid container direction='column' spacing={2} alignItems='center'>
         <Grid item direction='column' sm={12}><BGLogo/></Grid>
         <Grid/>
