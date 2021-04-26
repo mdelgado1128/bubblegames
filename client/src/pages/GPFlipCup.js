@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useEffect }from  'react';
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import React, { useEffect }from 'react';
-import { withStyles } from "@material-ui/core/styles";
 import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -9,6 +7,8 @@ import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import ParticlesBg from "particles-bg";
+import { useHistory } from "react-router-dom";
+import API from "../utils/API";
 const useStyles = makeStyles((theme) => ({
   particlesBg: {
     zIndex: -1,
@@ -20,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-import { useHistory } from "react-router-dom";
-import API from "../utils/API";
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
