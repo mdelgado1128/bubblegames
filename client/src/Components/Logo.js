@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/BGLogo.jpg'
+import Logo from '../images/BGLogo.png'
 
 console.log(Logo);
 
