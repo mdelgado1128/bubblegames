@@ -78,8 +78,7 @@ export default function QuartersAcc() {
   
   return (
     <div className="App-header">
-      <Grid container direction="column" spacing={2} alignItems='center'>
-       
+      <Grid container direction="column" spacing={2}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
