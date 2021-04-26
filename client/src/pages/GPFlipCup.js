@@ -1,6 +1,5 @@
 import React, { useEffect }from  'react';
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
@@ -89,7 +88,6 @@ export default function FlipCupAcc() {
   return (    
   
 <div>
- <BGLogo />
        <Grid container direction="column">
       <Grid item xs={12}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
