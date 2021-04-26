@@ -1,12 +1,18 @@
 import React, { useEffect } from "react";
+<<<<<<< HEAD
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import BGLogo from "../Components/Logo";
+=======
+import { withStyles } from "@material-ui/core/styles";
+>>>>>>> 692b11572d6706fafb2344ab4bcd0780d8ab0caa
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 // import { propTypes } from "react-bootstrap/esm/Image";
+import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+<<<<<<< HEAD
 import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   particlesBg: {
@@ -18,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
     right: 0
   }
 }));
+=======
+
+
+
+
+
+>>>>>>> 692b11572d6706fafb2344ab4bcd0780d8ab0caa
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -61,16 +74,16 @@ const AccordionDetails = withStyles((theme) => ({
 
 export default function KingsCupAcc(props) {
   const [expanded, setExpanded] = React.useState("panel1");
-
+  let history = useHistory();
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      props.history.push("/");
+      history.push("/Login");
     }
     function userAuth(event) {
       API.checkAuth().then((res) => {
         console.log(res);
         if (!res.data) {
-          return props.history.push("/");
+          return history.push("/Login");
         }
       });
     }
@@ -82,10 +95,14 @@ export default function KingsCupAcc(props) {
   };
 
   return (
+<<<<<<< HEAD
     
     <div className="App-header">
       <BGLogo />
       <Grid container direction="column" spacing={2} alignItems=''>
+=======
+    <div>
+>>>>>>> 692b11572d6706fafb2344ab4bcd0780d8ab0caa
       <Accordion
         square
         expanded={expanded === "panel1"}
@@ -181,7 +198,7 @@ export default function KingsCupAcc(props) {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </Grid>
+   
     </div>
   );
 }

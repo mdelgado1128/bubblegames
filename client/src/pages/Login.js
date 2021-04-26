@@ -129,8 +129,7 @@ console.log(res)
 
   return (
       
-   <div className="App-header">
-   <BGLogo />
+   <div className="App-header"> 
     
     <div className={classes.root}> 
 
