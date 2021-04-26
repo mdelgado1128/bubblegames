@@ -76,7 +76,6 @@ export default function BeerPongAcc() {
 
   return (
     <div className="App-header">
-      <BGLogo />
       <Grid container direction="column" spacing={2}>
      
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>

@@ -12,6 +12,7 @@ import API from "../utils/API";
 
 
 
+
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -53,7 +54,7 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-export default function KingsCupAcc(props) {
+export default function KingsCupAcc() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
   useEffect(() => {

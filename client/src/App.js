@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
+// import SignInCard from './pages/Login'
+//import BGLogo from "./Components/Logo";
+//import Kings from './pages/GPKingsCup';
+//import Quarters from "./pages/GPQuarters";
 import Login from "./pages/Login";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import GamesButtons from './pages/GamesButtons'
@@ -20,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
-
+  localStorage.clear();
+ 
   return (
     <Router>
       <ParticlesBg type="circle" bg={true} />
@@ -39,7 +44,7 @@ export default function App() {
                 <Login />
               </Route>
               <Route exact path="/">
-                <GamesButtons/>
+                <GamesButtons />
               </Route>
               <Route exact path="/KingsCup">
                   <KingsCupAcc />
