@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
@@ -11,7 +12,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import HomeIcon from '@material-ui/icons/Home';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
 import '../App.css';
 
 
@@ -49,15 +49,17 @@ export default function SideBar() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-    >npm st
+    >
+      <Link to="/">
       <List>
-        {['Home', 'Games', 'Hall of Bubbles'].map((text, index) => (
+        {['Home'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <LocalBarIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
       </List>
+      </Link>
       <Divider />
       <List>
         {['Facebook'].map((text, index) => (
@@ -67,7 +69,16 @@ export default function SideBar() {
           </ListItem>                                 
         ))}
       </List>
-    </div>                                                          
+      <List>
+      <Link to="/Login">
+        {['Logout'].map((text) => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>                                 
+        ))}
+        </Link>
+      </List> 
+    </div>                                                         
   );
 
   return (

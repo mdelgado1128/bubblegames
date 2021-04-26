@@ -17,6 +17,7 @@ import FlipcupAcc from './pages/GPFlipCup'
 // import SideBar from './Components/SideBar.js'
 import ParticlesBg from 'particles-bg';
 import BGLogo from './Components/Logo'
+import SideBar from './Components/SideBar'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -42,6 +43,7 @@ export default function App() {
       </div>
       <div>
       <BGLogo />
+      <SideBar />
         <div className={classes.root}>
 
 
