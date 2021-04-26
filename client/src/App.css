@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background: linear-gradient(0deg, #383838 30%,  #121212 50%);
+  background: linear-gradient(0deg, #383838 10%,  #121212 30%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

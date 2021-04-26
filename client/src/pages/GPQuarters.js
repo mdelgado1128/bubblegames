@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 import React, {useEffect} from 'react';
+=======
+import React, { useEffect }from 'react';
+>>>>>>> db3fc25d27e2de3ac3d170e5b66c0fce6b0fa8fb
 import { withStyles } from "@material-ui/core/styles";
-// import BGLogo from './Logo'
+import BGLogo from '../Components/Logo';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
+<<<<<<< HEAD
 import {useHistory} from 'react-router-dom'
 import API from '../utils/API'
+=======
+import Grid from '@material-ui/core/Grid';
+import { useHistory } from "react-router-dom";
+import API from "../utils/API";
+
+>>>>>>> db3fc25d27e2de3ac3d170e5b66c0fce6b0fa8fb
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
@@ -51,13 +62,30 @@ const AccordionDetails = withStyles((theme) => ({
 export default function QuartersAcc() {
   const [expanded, setExpanded] = React.useState('panel1');
 
+  let history = useHistory();
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      history.push("/Login");
+    }
+    function userAuth(event) {
+      API.checkAuth().then((res) => {
+        console.log(res);
+        if (!res.data) {
+          return history.push("/Login");
+        }
+      });
+    }
+    userAuth();
+  }, );
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
   
   return (
-    <div>
-      {/* <BGLogo /> */}
+    <div className="App-header">
+      <Grid container direction="column" spacing={2} alignItems='center'>
+        <BGLogo/>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
@@ -111,6 +139,7 @@ export default function QuartersAcc() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </Grid>
     </div>
   )
 };
