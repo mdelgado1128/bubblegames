@@ -1,10 +1,11 @@
 import React from 'react';
 import { withStyles } from "@material-ui/core/styles";
-// import BGLogo from './Logo'
+import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 const Accordion = withStyles({
   root: {
@@ -55,8 +56,9 @@ export default function QuartersAcc() {
   };
 
   return (
-    <div>
-      {/* <BGLogo /> */}
+    <div className="App-header">
+      <Grid container direction="column" spacing={2} alignItems='center'>
+        <BGLogo/>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
@@ -110,6 +112,7 @@ export default function QuartersAcc() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </Grid>
     </div>
   )
 };

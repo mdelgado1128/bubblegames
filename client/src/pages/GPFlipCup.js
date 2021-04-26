@@ -1,10 +1,11 @@
 import React from 'react';
 import { withStyles } from "@material-ui/core/styles";
-// import BGLogo from '../Components/Logo'
+import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 const Accordion = withStyles({
   root: {
@@ -55,8 +56,10 @@ export default function FlipCupAcc() {
   };
 
   return (
-    <div>
-      {/* <BGLogo /> */}
+    <div className="App-header">
+      <BGLogo />
+       <Grid container direction="column" spacing={2}>
+      <Grid item xs={12}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
@@ -80,12 +83,18 @@ export default function FlipCupAcc() {
             <br />
             While the plastic cup barely hangs off the edge, 
             <br />
-            players/teams take turns flipping cups 180 degrees into the upside down position
+            Players/teams take turns flipping cups 180 degrees into the upside down position
             <br />
             Losing player/team takes the penalty
+            <br/>
+            Variations of the game may include a line of cups for each team,
+            <br />
+            Winner is declared upon correctly flipping all their cups in onto the upside down position. 
           </Typography>
         </AccordionDetails>
       </Accordion>
+      </Grid>
+      </Grid>
     </div>
   )
 };
