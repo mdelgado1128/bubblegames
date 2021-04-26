@@ -1,3 +1,4 @@
+//---------------IMPORTS-----------------------//
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -5,7 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import { CardActionArea } from '@material-ui/core';
-
+//----------------------------------------------//
+//------------STYLING---------------------------//
+//-----------Material UI joe--------------------//
 const useStyles = makeStyles({
  pos: {
     marginBottom: 12,
@@ -16,7 +19,8 @@ const WhiteTextTypography = withStyles({
     color: "#FFFFFF"
   }
 })(Typography);
-
+//-----------------------------------------------//
+//--------------export quarters card-------------//
 export default function Quarters() {
   const classes = useStyles();
 

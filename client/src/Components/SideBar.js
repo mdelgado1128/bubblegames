@@ -1,3 +1,4 @@
+//-------------IMPORTS------------------------//
 import React from 'react';
 import clsx from 'clsx';
 import {Link} from 'react-router-dom'
@@ -13,8 +14,9 @@ import LocalBarIcon from '@material-ui/icons/LocalBar';
 import HomeIcon from '@material-ui/icons/Home';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import '../App.css';
-
-
+//-----------------------------------------------//
+//----------------STYLING------------------------//
+//-------------Material UI joe-------------------//
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -23,7 +25,9 @@ const useStyles = makeStyles({
     width: 'auto',
   },
 });
-
+//------------------------------------------------//
+//-----------export Sidebar-----------------------//
+//*notes* Finish logout Func----------------------//
 export default function SideBar() {
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -99,5 +103,6 @@ export default function SideBar() {
     </div>
   );
 }
-
+//---------------------------------------------------------------------//
+//---------------------add href for link below-------------------------//
 // facebook page url https://www.facebook.com/Bubble-Games-109718827921302

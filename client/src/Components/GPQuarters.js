@@ -1,11 +1,13 @@
+//--------------IMPORTS-----------------------------//
 import React from 'react';
 import { withStyles } from "@material-ui/core/styles";
-//import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-
+//---------------------------------------------------//
+//-------------STYLING-------------------------------//
+//-------------Material UI joe-----------------------//
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
@@ -46,7 +48,8 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
+//---------------------------------------------------//
+//-----------Export Quarters Acc---------------------//
 export default function QuartersAcc() {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -123,3 +126,4 @@ export default function QuartersAcc() {
     </div>
   )
 };
+//-------------------------------------------------------------//

@@ -1,3 +1,4 @@
+//------------IMPORTS-------------------------//
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -5,7 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import { CardActionArea } from '@material-ui/core';
-
+//--------------------------------------------//
+//-------------Styling------------------------//
+//-------Material UI joe----------------------//
 const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
@@ -16,7 +19,8 @@ const TealTextTypography = withStyles({
     color: "#00897b"
   }
 })(Typography);
-
+//---------------------------------------------//
+//--------Export Flip Cup Accordian------------//
 export default function FlipCup() {
   const classes = useStyles();
 
@@ -43,3 +47,4 @@ export default function FlipCup() {
     </Card>
   );
 }
+//-----------------------------------------------//
