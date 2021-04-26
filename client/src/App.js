@@ -1,23 +1,20 @@
-import React, {useEffect} from 'react';
+//--------------IMPORTS------------------------//
+import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-// import SignInCard from './pages/Login'
-// import BGLogo from "./Components/Logo";
-// import Kings from './pages/GPKingsCup';
-// import Quarters from "./pages/GPQuarters";
 import Login from "./pages/Login";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import GamesButtons from './pages/GamesButtons'
 import KingsCupAcc from './pages/GPKingsCup'
 import BeerPongAcc from './pages/GPBeerPong'
 import QuartersAcc from './pages/GPQuarters'
 import FlipcupAcc from './pages/GPFlipCup'
-// import Grid from '@material-ui/core/Grid';
-// import BGHeader from './Components/Header'
-// import SideBar from './Components/SideBar.js'
 import ParticlesBg from 'particles-bg';
 import BGLogo from './Components/Logo'
 import SideBar from './Components/SideBar'
+//-----------------------------------------------//
+//----------------STYLING------------------------//
+//--------Material UI joe------------------------//
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -31,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     right: 0
   }
 }));
-
+//-------------------------------------------------//
+//------------export main app----------------------//
 export default function App() {
   const classes = useStyles();
   localStorage.clear();
@@ -81,3 +79,5 @@ export default function App() {
 
   );
 }
+//---------------------------------------------------//
+// *Notes* Logout Fuction, Center Logo, Side Bar more visible//

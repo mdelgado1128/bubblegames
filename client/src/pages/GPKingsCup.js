@@ -1,23 +1,15 @@
+//---------------IMPORTS-----------------------//
 import React, { useEffect } from "react";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles} from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
-// import { propTypes } from "react-bootstrap/esm/Image";
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
-import Grid from "@material-ui/core/Grid";
-const useStyles = makeStyles((theme) => ({
-  particlesBg: {
-    zIndex: -1,
-    position: "fixed",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0
-  }
-}));
+//----------------------------------------------//
+//-------------STYLING--------------------------//
+//---------Material UI joe----------------------//
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -58,7 +50,8 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
+//----------------------------------------------//
+//------------Export Kings Cup------------------//
 export default function KingsCupAcc() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
@@ -182,3 +175,5 @@ export default function KingsCupAcc() {
     </div>
   );
 }
+//----------------------------------------------------------------//
+//*Notes* Dupe Component?//

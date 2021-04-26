@@ -1,3 +1,4 @@
+//----------IMPORT---------------//
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -5,7 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import { CardActionArea } from '@material-ui/core';
-
+//-------------------------------//
+//-----------Styling-------------//
+//------Material UI joe----------//
 const useStyles = makeStyles({
  pos: {
     marginBottom: 12,
@@ -16,7 +19,8 @@ const WhiteTextTypography = withStyles({
     color: "#FFFFFF"
   }
 })(Typography);
-
+//--------------------------------//
+//-----------Export Beerpong Acordian-----------//
 export default function BeerPong() {
   const classes = useStyles();
 
@@ -43,3 +47,4 @@ export default function BeerPong() {
     </Card>
   );
 }
+//----------------------------------------------//

@@ -1,9 +1,8 @@
-import React, { useState, useEffect} from 'react';
+//------------IMPORTS------------------------//
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-// import FormControlLabel from '@material-ui/core/FormControlLabel';
-// import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -13,17 +12,11 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import API from "../utils/API";
-// import axios from 'axios';
 import { useHistory } from "react-router-dom"
-import BGLogo from "../Components/Logo";
-// import { Divider } from '@material-ui/core';
 import '../App.css';
-// import ButtonPageStepper from '../Components/Stepper';
-
-
-
-// import {BrowserRouter as Router, Route } from "react-router-dom";
-
+//----------------------------------------------//
+//-------------STYLING--------------------------//
+//--------Material UI joe-----------------------//
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -36,12 +29,6 @@ function Copyright() {
     </Typography>
   );
 }
-// const WhiteTextTypography = withStyles({
-//     root: {
-//       color: "#8ecbea"
-//     }
-//   })(Typography);
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -61,15 +48,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
 }));
-
-  
+//--------------------------------------------------//
+//--------------Export Sign in----------------------//
 export default function SignInCard() {
   const classes = useStyles();
-
+//--------------AUTH mark---------------------------//
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login, setLogin] = useState(false);
-  
+  console.log(login)
 
   let history = useHistory();
 
@@ -115,8 +102,7 @@ function handleSignIn(event) {
 
     })
   }
-
-
+//--------------------------------------------------//
   return (
       
    <div className="App"> 
@@ -198,3 +184,5 @@ function handleSignIn(event) {
 
    );
 }
+//---------------------------------------------------------//
+//*Notes* Clickable Logout Function on app.js--------------//
