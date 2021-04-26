@@ -8,13 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import { CardActionArea } from '@material-ui/core';
-import BGLogo from "../Components/Logo";
+//import BGLogo from "../Components/Logo";
 import API from "../utils/API";
 import { useHistory } from "react-router-dom";
 // import ButtonPageStepper from "../Components/Stepper";
-import {
-  Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const UseStyles = makeStyles({
@@ -74,7 +72,7 @@ export default function GamesButtons(props) {
   
     <div>
         <Grid container direction='column' spacing={2} alignItems='center'>
-        <Grid item direction='column' sm={12}><BGLogo/></Grid>
+        <Grid item direction='column' sm={12}></Grid>
         <Grid/>
    
         <Grid container spacing={2} alignItems='center'>

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
   const classes = useStyles();
-
+  localStorage.clear();
  
   return (
     <Router>
@@ -44,7 +44,7 @@ export default function App() {
                 <Login />
               </Route>
               <Route exact path="/">
-                <GamesButtons/>
+                <GamesButtons />
               </Route>
               <Route exact path="/KingsCup">
                   <KingsCupAcc />
