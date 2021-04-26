@@ -18,7 +18,7 @@ import { useHistory } from "react-router-dom"
 import BGLogo from "../Components/Logo";
 // import { Divider } from '@material-ui/core';
 import '../App.css';
-
+// import ButtonPageStepper from '../Components/Stepper';
 
 
 
@@ -203,6 +203,7 @@ console.log(res)
         <Copyright />
       </Box>
     </Container>
+ {/* <ButtonPageStepper/> */}
  </div>
  </div>  
 

@@ -27,15 +27,11 @@ export default function CenteredGrid() {
 
   return (
     <Router >
+      <ParticlesBg type="circle" bg={true} />
 
-      <div className="App-Heade">
+      <div>
 
         <div className={classes.root}>
-
-
-
-
-
 
 
           <Switch>
@@ -66,7 +62,6 @@ export default function CenteredGrid() {
 
         </div>
       </div>
-      <ParticlesBg type="circle" bg={true}/>
     </Router>
 
 
