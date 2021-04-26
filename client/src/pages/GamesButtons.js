@@ -10,6 +10,9 @@ import { CardActionArea } from '@material-ui/core';
 import {
   Link
 } from "react-router-dom";
+import { useEffect } from 'react';
+import {useHistory} from 'react-router-dom'
+import API from '../utils/API'
 
 const UseStyles = makeStyles({
   pos: {
@@ -30,8 +33,8 @@ const WhiteTextTypography = withStyles({
   })(Typography);
 
 export default function GamesButtons() {
-  const classes = UseStyles();
-
+   const classes = UseStyles();
+ 
   return (
   
   <div>

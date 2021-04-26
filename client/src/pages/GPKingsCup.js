@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import BGLogo from "../Components/Logo";
+//import BGLogo from "../Components/Logo";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
-import { propTypes } from "react-bootstrap/esm/Image";
+//import { propTypes } from "react-bootstrap/esm/Image";
 import API from "../utils/API";
+import {useHistory} from 'react-router-dom'
 
 const Accordion = withStyles({
   root: {
@@ -49,23 +50,8 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-export default function KingsCupAcc(props) {
+export default function KingsCupAcc() {
   const [expanded, setExpanded] = React.useState("panel1");
-
-  useEffect(() => {
-    if (!localStorage.getItem("token")) {
-      props.history.push("/");
-    }
-    function userAuth(event) {
-      API.checkAuth().then((res) => {
-        console.log(res);
-        if (!res.data) {
-          return props.history.push("/");
-        }
-      });
-    }
-    userAuth();
-  }, );
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);

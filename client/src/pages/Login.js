@@ -1,4 +1,4 @@
-import React, { useState, useContext} from 'react';
+import React, { useState, useEffect} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -114,16 +114,6 @@ function handleSignIn(event) {
 
     })
   }
-  function userAuth (event) {
-    event.preventDefault();
-    API.checkAuth( 
-  localStorage.getItem("token")
-
-  ).then ((res) => {
-console.log(res)
-    })
-     
-   }
 
 
   return (
