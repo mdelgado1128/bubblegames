@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import BGLogo from "../Components/Logo";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
@@ -10,7 +9,7 @@ import { useHistory } from "react-router-dom";
 import API from "../utils/API";
 
 
-import Grid from "@material-ui/core/Grid";
+
 
 
 const Accordion = withStyles({
@@ -77,9 +76,7 @@ export default function KingsCupAcc(props) {
   };
 
   return (
-    <div className="App-header">
-      <BGLogo />
-      <Grid container direction="column" spacing={2} alignItems=''>
+    <div>
       <Accordion
         square
         expanded={expanded === "panel1"}
@@ -175,7 +172,7 @@ export default function KingsCupAcc(props) {
           </Typography>
         </AccordionDetails>
       </Accordion>
-    </Grid>
+   
     </div>
   );
 }
