@@ -40,10 +40,10 @@ export default function App() {
       <ParticlesBg type="circle" bg={true} />
       </div>
       <div>
-      <BGLogo />
-      <SideBar />
+     
         <div className={classes.root}>
-
+        <BGLogo />
+        <SideBar />
 
           <Switch>
             <Route exact path="/Login">
