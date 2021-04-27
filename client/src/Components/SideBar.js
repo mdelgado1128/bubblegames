@@ -12,7 +12,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import HomeIcon from '@material-ui/icons/Home';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import Grid from '@material-ui/core/Grid';
 import '../App.css';
 //-----------------------------------------------//
