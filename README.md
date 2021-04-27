@@ -1,19 +1,14 @@
-# BubbleGames
+# [BubbleGames](https://powerful-temple-01996.herokuapp.com/)
 --Group 3 Project 3--
 **Bubble Games** is an app passionately dedicated to drinking games. Through an organized page, find your favorite drinking games and _avoid arguments_ about the rules!
 
 =======
 ###  Features
 =======
-..* X
-..* Y
-..* Z
+-- Find All of your Favorite Drinking Games
+-- Styling done With [Material UI](https://material-ui.com/)
+-- Easily Authenticate Yourself with our Login page
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)[!]
-
-![Screenshot]
-[Deployed]
-[Main Repo link]
 
 
 ## Wireframes
@@ -32,14 +27,15 @@ cond(no)->op
 ```
 
 ## Login
-![loginwire](./images/login-wireframe.png)
+![login](./images/loginBBGames.png)
 
 ## Home
-![homewire](./images/mainpage-wireframe.png)
+![home](./images/home.png)
 
-## Game
+## WireFrames
 ![gamewire](./images/game-wireframe.png)
-
+![loginwire](./images/login-wireframe.png)
+![homewire](./images/mainpage-wireframe.png)
 ==========
 Created as equals, by:
 ==========
@@ -50,5 +46,8 @@ Syrus Sadvandi
 Tyler Willians
 
 ## To-Do
-    --Add Games (flip cup, quarters, kings cup, beer pong)
-    --Authentication
+    --Create Larger Database of Games
+    --Refine Auth Page
+    --Add player interaction
+    --Game Functionality
+    --Keeping Score
