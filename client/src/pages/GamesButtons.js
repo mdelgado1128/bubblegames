@@ -11,6 +11,7 @@ import "../styles/GamesButtons.css";
 import API from "../utils/API";
 import { useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
+import QuartersBtn from '../Components/QuartersBtn';
 //-------------------------------------------//
 //---------------SYLING----------------------//
 //---------Material UI joe-------------------//
@@ -81,19 +82,7 @@ export default function GamesButtons(props) {
       <Link to="/KingsCup">
       <CardActionArea>
       <CardContent>
-          <GreyTextTypography>
-        <Typography variant="h5" component="h2">
-          King's Cup
-        </Typography>
-        <Typography className={classes.pos}>
-          You'll need: Deck of Cards,<br/> 2-12(or more)players
-        </Typography>
-        <Typography variant="body2" component="p">
-          Players take turns pulling cards that decide how the game is played.
-          <br />
-        </Typography>
-
-        </GreyTextTypography>
+      <QuartersBtn/>
 
       </CardContent>
       </CardActionArea>
