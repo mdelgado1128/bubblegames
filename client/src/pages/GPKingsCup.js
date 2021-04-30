@@ -1,17 +1,15 @@
+//---------------IMPORTS-----------------------//
 import React, { useEffect } from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles} from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
-// import { propTypes } from "react-bootstrap/esm/Image";
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
-
-
-
-
-
+//----------------------------------------------//
+//-------------STYLING--------------------------//
+//---------Material UI joe----------------------//
 const Accordion = withStyles({
   root: {
     border: "1px solid rgba(0, 0, 0, .125)",
@@ -52,8 +50,9 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
-export default function KingsCupAcc(props) {
+//----------------------------------------------//
+//------------Export Kings Cup------------------//
+export default function KingsCupAcc() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
   useEffect(() => {
@@ -176,3 +175,5 @@ export default function KingsCupAcc(props) {
     </div>
   );
 }
+//----------------------------------------------------------------//
+//*Notes* Dupe Component?//

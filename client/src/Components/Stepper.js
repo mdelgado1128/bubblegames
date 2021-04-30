@@ -1,3 +1,4 @@
+//-----------IMPORTS-------------------------//
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -8,7 +9,9 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-
+//--------------------------------------------//
+//----------------STYLING FUNC----------------//
+//-------------Material UI joe----------------//
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
@@ -55,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
 }));
-
+//--------------------------------------------//
+//---------export button stepper--------------//
 function ButtonPageStepper() {
   const classes = useStyles();
   const theme = useTheme();
@@ -114,5 +118,5 @@ function ButtonPageStepper() {
     </div>
   );
 }
-
 export default ButtonPageStepper;
+//----------------------------------//

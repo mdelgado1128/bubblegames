@@ -1,11 +1,16 @@
+//---------IMPORTS------------------//
 import React from 'react';
-import Logo from '../images/BGLogo.jpg'
-
-console.log(Logo);
-
-function BGLogo() {
+import Logo from '../images/BGLogo.png'
+import Grid from '@material-ui/core/Grid';
+//----------------------------------//
+//-----------logo Export------------//
+export default function BGLogo() {
   // Import result is the URL image
-  return <img src={Logo} alt="Bubbles Games" />;
-}
 
-export default BGLogo;
+  return( 
+  <Grid container direction='column' spacing={2} alignItems='center'>
+  <img src={Logo} alt="Bubbles Games" />
+  </Grid>
+  )
+}
+//-----------------------------------//

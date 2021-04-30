@@ -1,6 +1,6 @@
+//------------IMPORTS----------------------//
 import React, { useEffect }from 'react';
 import { withStyles } from "@material-ui/core/styles";
-import BGLogo from '../Components/Logo';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
@@ -8,7 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
-
+//------------------------------------------//
+//------------STYLING-----------------------//
+//-------Material UI joe--------------------//
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
@@ -49,7 +51,8 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
+//---------------------------------------//
+//----------Export Quarters Acc----------//
 export default function QuartersAcc() {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -72,11 +75,10 @@ export default function QuartersAcc() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
+  
   return (
-    <div className="App-header">
-      <Grid container direction="column" spacing={2} alignItems='center'>
-        <BGLogo/>
+    <div className="App">
+      <Grid container direction="column" spacing={2}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
@@ -116,17 +118,6 @@ export default function QuartersAcc() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          {/* Each round starts off with a glass filled with a drink in the middle of the table and two people on opposite ends of the table having a quarter and a glass.
-          <br />
-          Each player shoots his or her quarter at his/her glass until he makes it in, then the player passes the glass to the player to their left
-          <br />
-          If the player to their left still has a glass as well, the player taps that glass with theirs, and the player who has been tapped must drink from the glass in the middle of the table, refill it, then make the quarter into his or her glass before they get tapped again, with play still going around the table.
-          <br />
-          If a player makes his or her first shot, s/he can choose to pass the glass to any player who does not currently have a glass.
-          <br />
-          If there are enough people at the table, the group can add more shot glasses and position them equally spaced around the outside of the circle.
-          <br /> */}
-
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -134,3 +125,5 @@ export default function QuartersAcc() {
     </div>
   )
 };
+//----------------------------------------------------------//
+//*Unnecessary HTML Tags? Dupe Component?//

@@ -1,6 +1,6 @@
+//-----------------IMPORTS----------------------//
 import React, { useEffect }from 'react';
 import { withStyles } from "@material-ui/core/styles";
-import BGLogo from '../Components/Logo'
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+//----------------------------------------------//
+//--------------STYLING-------------------------//
+//------------Material UI joe-------------------//
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
@@ -48,7 +51,8 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
+//----------------------------------------------//
+//-----------EXPORT Beer Pong Acc---------------//
 export default function BeerPongAcc() {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -75,8 +79,7 @@ export default function BeerPongAcc() {
   };
 
   return (
-    <div className="App-header">
-      <BGLogo />
+    <div className="App">
       <Grid container direction="column" spacing={2}>
      
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -155,3 +158,5 @@ export default function BeerPongAcc() {
     </div>
   )
 };
+//-------------------------------------------//
+//*Notes* 2 of same component?//

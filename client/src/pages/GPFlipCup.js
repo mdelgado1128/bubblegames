@@ -1,6 +1,6 @@
-import React, { useEffect }from 'react';
-import { withStyles } from "@material-ui/core/styles";
-import BGLogo from '../Components/Logo'
+//----------------IMPORTS--------------------//
+import React, { useEffect }from  'react';
+import { withStyles,} from "@material-ui/core/styles";
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+//--------------------------------------------//
+//--------------STYLING-----------------------//
+//---------Material UI joe--------------------//
 const Accordion = withStyles({
   root: {
     border: '1px solid rgba(0, 0, 0, .125)',
@@ -48,7 +51,8 @@ const AccordionDetails = withStyles((theme) => ({
     padding: theme.spacing(2),
   },
 }))(MuiAccordionDetails);
-
+//------------------------------------------------------//
+//-------------------Export Flip Cup--------------------//
 export default function FlipCupAcc() {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -71,11 +75,12 @@ export default function FlipCupAcc() {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+  
 
-  return (
-    <div className="App-header">
-      <BGLogo />
-       <Grid container direction="column" spacing={2}>
+  return (    
+  
+<div>
+       <Grid container direction="column">
       <Grid item xs={12}>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
@@ -112,6 +117,10 @@ export default function FlipCupAcc() {
       </Accordion>
       </Grid>
       </Grid>
+      
     </div>
+    
   )
 };
+//--------------------------------------------------------//
+//*Notes* Dupe Component?//

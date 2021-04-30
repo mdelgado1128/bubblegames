@@ -1,21 +1,19 @@
+//--------------IMPORTS----------------------//
 import React, { useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-// import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-// import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid';
 import { CardActionArea } from '@material-ui/core';
-import BGLogo from "../Components/Logo";
+import "../styles/GamesButtons.css";
 import API from "../utils/API";
 import { useHistory } from "react-router-dom";
-// import ButtonPageStepper from "../Components/Stepper";
-import {
-  Link
-} from "react-router-dom";
-
+import {Link} from "react-router-dom";
+//-------------------------------------------//
+//---------------SYLING----------------------//
+//---------Material UI joe-------------------//
 const UseStyles = makeStyles({
   pos: {
     marginBottom: 12,
@@ -45,7 +43,8 @@ const BlackTextTypography = withStyles({
       color: "#121212"
     }
   })(Typography);
-
+//----------------------------------------//
+//--------Export Games Buttons------------//
 export default function GamesButtons(props) {
   const classes = UseStyles();
 
@@ -71,9 +70,9 @@ export default function GamesButtons(props) {
 
   return (
   
-    <div>
+    <div className wrapper>
         <Grid container direction='column' spacing={2} alignItems='center'>
-        <Grid item direction='column' sm={12}><BGLogo/></Grid>
+        <Grid item direction='column' sm={12}></Grid>
         <Grid/>
    
         <Grid container spacing={2} alignItems='center'>
@@ -97,9 +96,6 @@ export default function GamesButtons(props) {
         </GreyTextTypography>
 
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">I want to play this game </Button>
-      </CardActions> */}
       </CardActionArea>
       </Link>
     </Card>
@@ -182,12 +178,9 @@ export default function GamesButtons(props) {
     </Card>
     </Grid>
     </Grid>
-    {/* <Grid container direction='column' spacing={2} alignItems='center'>
-    <Grid item xs={12}>
-      <ButtonPageStepper/>
-    </Grid>
-    </Grid> */}
     </Grid>
   </div>
   );
 }
+//----------------------------------------------------//
+//*Notes* Add new games and render buttons from a database//
