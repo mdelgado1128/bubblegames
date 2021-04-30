@@ -42,36 +42,36 @@ export default function GamesButtons(props) {
    
         <Grid container spacing={2} alignItems='center' direction='column'>
         <Grid item ={6}>
-        <Link to="./KingsCup.js">
        <div className='BtnAnimation'>
+        <Link to="/KingsCup">
        <KingsCupBtn/>
-       </div>
       </Link>
+       </div>
     </Grid>
     
   
     <Grid item ={6}>
-      <Link to="/FlipCup">
       <div className='BtnAnimation'>
+      <Link to="/FlipCup">
      <FlipCupBtn/>
-     </div>
       </Link>
+     </div>
     </Grid>
   
   <Grid item ={6}>
-      <Link to="/Quarters">
       <div className='BtnAnimation'>
+      <Link to="/Quarters">
     <QuartersBtn/>
-    </div>
       </Link>
+    </div>
     </Grid>
 
 <Grid item ={6}>
-      <Link to="/BeerPong">
       <div className='BtnAnimation'>
+      <Link to="/BeerPong">
     <BeerPongBtn/>
-    </div>
       </Link>
+    </div>
     </Grid>
     </Grid>
     </Grid>
