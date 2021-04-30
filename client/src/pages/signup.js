@@ -15,7 +15,6 @@ import CardContent from '@material-ui/core/CardContent';
 import API from "../utils/API";
 // import axios from 'axios';
 import { useHistory } from "react-router-dom"
-import BGLogo from "../Components/Logo";
 // import { Divider } from '@material-ui/core';
 import '../App.css';
 import Alert from '@material-ui/lab/Alert';
@@ -64,45 +63,60 @@ const useStyles = makeStyles((theme) => ({
 }));
 
   
-export default function SignInCard() {
+export default function SignUpCard() {
   const classes = useStyles();
 
+  const [name, setName] = useState("");
+  const [last, setLast] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login, setLogin] = useState(false);
   
   
 
-  let history = useHistory();
+//   let history = useHistory();
 
-function handleSignIn(event) {
+// function handleSignIn(event) {
     
+//     event.preventDefault();
+//     API.getAuth ({
+//       // eslint-disable-next-line no-undef
+//       email,
+//       // eslint-disable-next-line no-undef
+//       password
+//     }).then((res) => {
+//       console.log(res);
+//       console.log("You are now signed in!")
+//      if(!res.data.token) {
+//        setLogin(false);
+//      } else {
+//        localStorage.setItem("token",res.data.token)
+//        setLogin(true);
+//       history.push("/")
+
+//      }
+      
+//     }).catch((err) => {
+//       console.log(err, "incorrect password or username")
+//     })
+  
+//   }
+
+  function handleSignUp(event) {
     event.preventDefault();
-    API.getAuth ({
+    API.saveAuth ({
       // eslint-disable-next-line no-undef
       email,
       // eslint-disable-next-line no-undef
       password
     }).then((res) => {
-      console.log(res);
-      console.log("You are now signed in!")
-     if(!res.data.token) {
-       setLogin(false);
-     } else {
-       localStorage.setItem("token",res.data.token)
-       setLogin(true);
-      history.push("/")
-
-     }
+      console.log(res, "Thank you for signing up", email);
       
-    }).catch((err) => {
-      console.log(err, "incorrect password or username")
-    })
-  
-  }
+      
+    }).catch ((err) => {
+      console.log(err)
 
-  function handleSignUp(event) {
-    history.push("/SignUp")
+    })
   }
   function userAuth (event) {
     event.preventDefault();
@@ -141,6 +155,34 @@ console.log(res)
           Sign in
         </Typography>
         <form className={classes.form} noValidate >
+        <TextField
+          
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          label="First Name"
+          name="name"
+          autoComplete="name"
+          autoFocus
+          />
+          <TextField
+          
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="last"
+          value={last}
+          onChange={(e) => setLast(e.target.value)}
+          label="Last Name"
+          name="last"
+          autoComplete="last"
+          autoFocus
+          />
           <TextField
           
           variant="outlined"
@@ -155,6 +197,7 @@ console.log(res)
           autoComplete="email"
           autoFocus
           />
+
           <TextField
             variant="outlined"
             margin="normal"
@@ -169,22 +212,16 @@ console.log(res)
             autoComplete="current-password"
             />
           
-          <Button onClick={handleSignIn}
+          <Button onClick={handleSignUp}
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
             >
-            Sign In
+            Sign Up
           </Button  >
-          <Grid container>
-            <Grid item>
-              <Link href="#" variant="body2" onClick={handleSignUp}>
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
+        
 
           <Grid container>
             <Grid item>

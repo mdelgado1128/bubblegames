@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Login from "./pages/Login";
+import SignUp from "./pages/signup";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import GamesButtons from './pages/GamesButtons'
 import KingsCupAcc from './pages/GPKingsCup'
@@ -25,7 +26,10 @@ export default function App() {
     <Router>
       <ParticlesBg type="circle" bg={true} />
 
+       <SideBar />
+
    <div className="App-header"> 
+        
           <BGHeader />
        <div className={classes.root}> 
           
@@ -37,6 +41,9 @@ export default function App() {
             <Switch>
               <Route exact path="/Login">
                 <Login />
+              </Route>
+              <Route exact path="/SignUp">
+                <SignUp />
               </Route>
               <Route exact path="/">
                 <GamesButtons/>

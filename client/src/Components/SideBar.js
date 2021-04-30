@@ -33,6 +33,7 @@ export default function SideBar() {
     right: true,
   });
 
+
   const toggleDrawer = (anchor, open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -63,6 +64,15 @@ export default function SideBar() {
         {['Facebook'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{ <FacebookIcon /> }</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>                                 
+        ))}
+      </List>
+      <List onClick={localStorage.clear()} to="/Login">
+        {['Logout'].map((text, index) => (
+          <ListItem button key={text}>
+
+           
             <ListItemText primary={text} />
           </ListItem>                                 
         ))}

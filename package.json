@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/TylerWilliams97/BubbleGames#readme",
   "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
