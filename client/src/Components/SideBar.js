@@ -12,7 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import LocalBarIcon from '@material-ui/icons/LocalBar';
 import HomeIcon from '@material-ui/icons/Home';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import Grid from '@material-ui/core/Grid';
 import '../App.css';
 //-----------------------------------------------//
 //----------------STYLING------------------------//
@@ -66,14 +66,6 @@ export default function SideBar() {
       </Link>
       <Divider />
       <List>
-        {['Facebook'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{ <FacebookIcon /> }</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>                                 
-        ))}
-      </List>
-      <List>
       <Link to="/Login">
         {['Logout'].map((text) => (
           <ListItem button key={text}>
@@ -87,6 +79,7 @@ export default function SideBar() {
 
   return (
     <div>
+      <Grid container direction='column' spacing={2} alignItems='center'>
       {["Side Bar"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button color="primary" onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
@@ -100,6 +93,7 @@ export default function SideBar() {
           </SwipeableDrawer>
         </React.Fragment>
       ))}
+      </Grid>
     </div>
   );
 }

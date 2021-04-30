@@ -1,6 +1,10 @@
+//---------IMPORTS------------------//
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-
-
-import { withStyles } from "@material-ui/core/styles";
+import FlipCupBtnImg from '../images/FlipCup.png'
+//----------------------------------//
+//-----------QuartersBtn Export------------//
+export default function FlipCupBtn() {
+  // Import result is the URL image
+  return<img src={FlipCupBtnImg} alt="Flip Cup" />;
+}
+//-----------------------------------//

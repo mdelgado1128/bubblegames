@@ -12,8 +12,6 @@ import FlipcupAcc from './pages/GPFlipCup'
 import ParticlesBg from 'particles-bg';
 import BGLogo from './Components/Logo'
 import SideBar from './Components/SideBar'
-// import { Container } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid'
 //-----------------------------------------------//
 //----------------STYLING------------------------//
 //--------Material UI joe------------------------//
@@ -38,14 +36,16 @@ export default function App() {
  
   return (
     <Router >
-      <BGLogo />
+      {/* <BGLogo /> */}
       <div className={classes.particlesBg}>
       <ParticlesBg type="circle" bg={true} />
       </div>
       <div>
-      <SideBar />
+     
         <div className={classes.root}>
-        
+        <BGLogo />
+        <SideBar />
+
           <Switch>
             <Route exact path="/Login">
               <Login />
