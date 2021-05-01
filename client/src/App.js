@@ -36,6 +36,7 @@ export default function App() {
  
   return (
     <Router >
+      {/* <BGLogo /> */}
       <div className={classes.particlesBg}>
       <ParticlesBg type="circle" bg={true} />
       </div>
@@ -65,8 +66,6 @@ export default function App() {
               <BeerPongAcc />
             </Route>
           </Switch>
-
-
 
 
 
