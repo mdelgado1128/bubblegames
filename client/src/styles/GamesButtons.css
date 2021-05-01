@@ -1,3 +1,12 @@
 .wrapper {
     max-width: fit-content;
 }
+.BtnAnimation {
+    cursor:pointer;
+}
+.BtnAnimation:hover{
+    animation: pop 0.3s linear 1;
+} 
+@keyframes pop{
+  50%  {transform: scale(1.2);}
+} 

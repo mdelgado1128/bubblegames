@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 //------------IMPORTS------------------------//
->>>>>>> be1635e5818383b4571d47f31f78af6c715246cc
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,19 +14,11 @@ import CardContent from '@material-ui/core/CardContent';
 import API from "../utils/API";
 import { useHistory } from "react-router-dom"
 import '../App.css';
-<<<<<<< HEAD
 import Alert from '@material-ui/lab/Alert';
 // import ButtonPageStepper from '../Components/Stepper';
 
-
-
 // import {BrowserRouter as Router, Route } from "react-router-dom";
 
-=======
-//----------------------------------------------//
-//-------------STYLING--------------------------//
-//--------Material UI joe-----------------------//
->>>>>>> be1635e5818383b4571d47f31f78af6c715246cc
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -211,5 +200,3 @@ console.log(res)
 
    );
 }
-//---------------------------------------------------------//
-//*Notes* Clickable Logout Function on app.js--------------//
