@@ -15,6 +15,8 @@ import API from "../utils/API";
 import { useHistory } from "react-router-dom"
 import '../App.css';
 import Alert from '@material-ui/lab/Alert';
+import BGLogo from '../Components/Logo'
+
 // import ButtonPageStepper from '../Components/Stepper';
 
 // import {BrowserRouter as Router, Route } from "react-router-dom";
@@ -54,6 +56,8 @@ const useStyles = makeStyles((theme) => ({
 //--------------Export Sign in----------------------//
 export default function SignInCard() {
   const classes = useStyles();
+
+
 //--------------AUTH mark---------------------------//
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -110,10 +114,9 @@ console.log(res)
   return (
       
    <div className="App"> 
-    
+   <BGLogo /> 
     <div className={classes.root}> 
 
-  
 
   
 

@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+
+import Scores from "../Components/scores";
+
 //------------------------------------------//
 //------------STYLING-----------------------//
 //-------Material UI joe--------------------//
@@ -78,7 +81,10 @@ export default function QuartersAcc() {
   
   return (
     <div className="App">
+   
       <Grid container direction="column">
+        
+      < Scores />
     <h2>Quarters</h2>
       <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">

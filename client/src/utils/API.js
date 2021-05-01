@@ -10,13 +10,11 @@ export default {
   },
   checkAuth: function (authData) {
     const token = localStorage.getItem("token")
-    return axios.post("/api/auth/isAuth", {token})
+    return axios.post("/api/auth/isAuth", {token}, authData)
+  },
+
+  setScores: function(scoreData) {
+    return axios.post("api/scores/showScores", scoreData)
   }
-
-  // getGame: function(gameData) {
-  //   return axios.post(api/game/)
-  // }
   
-
-
 }
