@@ -11,7 +11,8 @@ import BeerPongAcc from './pages/GPBeerPong'
 import QuartersAcc from './pages/GPQuarters'
 import FlipcupAcc from './pages/GPFlipCup'
 import ParticlesBg from 'particles-bg';
-import SideBar from './Components/SideBar'
+import SideBar from './Components/SideBar';
+import BackArrowBtn from './Components/BackArrowBtn';
 
 import BGLogo from './Components/Logo'
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -43,7 +44,7 @@ export default function App() {
          
       <ParticlesBg type="circle" bg={true} />
        
-       <SideBar />
+       <BackArrowBtn />
 
    <div className="App"> 
         

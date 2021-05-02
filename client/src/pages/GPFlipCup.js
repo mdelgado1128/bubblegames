@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+import WYNBtn from '../Components/WYNBtn';
+import GameRulesBtn from '../Components/GameRulesBtn';
+
 //--------------------------------------------//
 //--------------STYLING-----------------------//
 //---------Material UI joe--------------------//
@@ -82,7 +85,10 @@ export default function FlipCupAcc() {
 <div>
        <Grid container direction="column">
       <Grid item xs={12}>
-      <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+
+<WYNBtn/>
+<GameRulesBtn/>
+      {/* <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>What you'll need</Typography>
         </AccordionSummary>
@@ -114,7 +120,7 @@ export default function FlipCupAcc() {
             Winner is declared upon correctly flipping all their cups in onto the upside down position. 
           </Typography>
         </AccordionDetails>
-      </Accordion>
+      </Accordion> */}
       </Grid>
       </Grid>
       
