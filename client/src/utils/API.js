@@ -15,6 +15,10 @@ export default {
 
   setScores: function(scoreData) {
     return axios.post("api/scores/showScores", scoreData)
+  },
+
+  getScores: function(scoreData) {
+    return axios.get("api/scores/allScores", scoreData)
   }
   
 }

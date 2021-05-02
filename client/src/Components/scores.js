@@ -1,10 +1,13 @@
-import React, { useState }from "react";
+import React, { useState, useEffect }from "react";
 import API from "../utils/API";
 
 
 export default function Scores (props) {
 const [score, setScore] = useState("");
 const [name, setName] = useState("");
+const [listScores, setListScores] =useState([]);
+// const [listName, setListName] =useState();
+
 
 function handleScore(event) {
 event.preventDefault();
@@ -18,8 +21,18 @@ API.setScores({
   console.log(err)
 })
 
-
 }
+
+useEffect (() => {
+  API.getScores().then(res => {
+    console.log(res.data)
+    setListScores(res.data)
+  }).catch(err => console.log(err))
+
+},[])
+
+
+
   return (
     <div>
       
@@ -52,6 +65,14 @@ API.setScores({
         >
           submit
         </button>
+
+      {listScores.map((s) => (
+        <div>
+        <h3>{s.name} </h3>
+        <h3>{s.score}</h3>
+        </div>
+      )) }
+
 
 
        
