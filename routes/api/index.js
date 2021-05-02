@@ -1,9 +1,10 @@
 const router =require("express").Router();
 const authRoutes= require("./authRoutes");
-const gameRoutes = require("./gameRoutes")
+const scoreRoutes= require("./scoreRoutes");
+
 
 router.use("/auth", authRoutes)
-// router.use("/game", gameRoutes)
+router.use("/scores", scoreRoutes)
 
 
 
