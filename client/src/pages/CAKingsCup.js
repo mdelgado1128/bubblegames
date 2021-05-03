@@ -1,14 +1,20 @@
 //---------------IMPORTS-----------------------//
 import React, { useEffect } from "react";
+import { withStyles} from "@material-ui/core/styles";
+import MuiAccordion from "@material-ui/core/Accordion";
+import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
+import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
+import Typography from "@material-ui/core/Typography";
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
 import WYNBtn from "../Components/WYNBtn";
 import GameRulesBtn from "../Components/GameRulesBtn";
-import CardRulesBtn from "../Components/CardRulesBtn"
-import "../styles/GamesButtons.css";
-import {Link} from "react-router-dom";
-//------------Export Kings Cup------------------//
-export default function KingsCupAcc() {
+import CardRulesBtn from "../Components/CardRulesBtn";
+import Paper from "@material-ui/core";
+//----------------------------------------------//
+
+// //------------Export Kings Cup Game Rules------------------//
+export default function CAKingsCup() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
   useEffect(() => {
@@ -25,76 +31,12 @@ export default function KingsCupAcc() {
     }
     userAuth();
   }, );
-
   return (
-    
     <div>
-    <div className='BtnAnimation'>
-   <WYNBtn/>
-   </div>
-   <div className='BtnAnimation'>
-      <Link to="./GRKingsCup.js">
-   <GameRulesBtn/>
-   </Link>
-   </div>
-   <div className='BtnAnimation'>
-     <Link to="./CAKingsCup.js">
-   <CardRulesBtn/>
-   </Link>
-    </div>
-    </div>
-  );
-}
-//----------------------------------------------------------------//
-//*Notes* Dupe Component?//
-{/* <Accordion
-  square
-  expanded={expanded === "panel1"}
-  onChange={handleChange("panel1")}
->
-  <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-    <Typography>What you'll need</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      Players: 4+ (More the merrier!)
-      <br />
-      Standard deck of cards
-      <br />
-      Large mug, chalice, pitcher to be used as the KING'S CUP
-    </Typography>
-  </AccordionDetails>
-</Accordion>
-<Accordion
-  square
-  expanded={expanded === "panel2"}
-  onChange={handleChange("panel2")}
->
-  <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-    <Typography>Instructions</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
-      One person pulls a card at a time and everyone responds
-      appropriately depending on what action the card requires.
-      <br />
-      Some cards are time sensitive reaction games while others game may
-      require a small setup time.
-      <br />
-      See card assignments below.
-    </Typography>
-  </AccordionDetails>
-</Accordion>
-<Accordion
-  square
-  expanded={expanded === "panel3"}
-  onChange={handleChange("panel3")}
->
-  <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-    <Typography>King's Cup Card Assignments</Typography>
-  </AccordionSummary>
-  <AccordionDetails>
-    <Typography>
+            <Paper variant="outlined">
+              <h2>Card Assignments</h2>
+            <Typography>
+      <Typography>
       Ace - Waterfall. (Each player starts drinking at the same time as
       the person to their left. NO player can stop drinking until the
       person before them stops.)
@@ -140,5 +82,8 @@ export default function KingsCupAcc() {
       When the 4th King is drawn, the person who drew it must drink the
       entire King's Cup.)
     </Typography>
-  </AccordionDetails>
-</Accordion> */}
+    </Typography>
+            </Paper>
+    </div>
+  );
+}

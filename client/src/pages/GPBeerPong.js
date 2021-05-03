@@ -85,6 +85,7 @@ export default function BeerPongAcc() {
     <div className="App">
       <Grid container direction="column" spacing={2}>
 
+
 <WYNBtn/>
 <GameRulesBtn/>
 

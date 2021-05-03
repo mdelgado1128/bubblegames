@@ -37,7 +37,7 @@ export default function GamesButtons(props) {
 
   return (
   
-    <div className wrapper>
+    <div className wrapper> 
         <Grid container direction='column' spacing={2} alignItems='center'>
           <BGLogo/>
         <Grid/>

@@ -43,10 +43,11 @@ export default function App() {
       <div className={classes.particlesBg}>
          
       <ParticlesBg type="circle" bg={true} />
+          </div>
        
-       <BackArrowBtn />
 
    <div className="App"> 
+       <BackArrowBtn />
         
         
        <div className={classes.root}> 
@@ -83,7 +84,6 @@ export default function App() {
           
     
 
-          </div>
         </div>
       </div>
      
