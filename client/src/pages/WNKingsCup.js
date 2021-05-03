@@ -14,7 +14,7 @@ import Paper from "@material-ui/core";
 //----------------------------------------------//
 
 // //------------Export Kings Cup Game Rules------------------//
-export default function CAKingsCup() {
+export default function WNKingsCup() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
   useEffect(() => {

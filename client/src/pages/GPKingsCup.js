@@ -7,6 +7,7 @@ import GameRulesBtn from "../Components/GameRulesBtn";
 import CardRulesBtn from "../Components/CardRulesBtn"
 import "../styles/GamesButtons.css";
 import {Link} from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
 //------------Export Kings Cup------------------//
 export default function KingsCupAcc() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -28,23 +29,34 @@ export default function KingsCupAcc() {
 
   return (
     
-    <div>
+    <div className wrapper>
+      <Grid container direction='column' spacing={2} alignItems='center'>
+      <Grid item ={6}>
     <div className='BtnAnimation'>
+      <Link to="./WNKingsCup.js">
    <WYNBtn/>
+   </Link>
    </div>
+   </Grid>
+   <Grid item ={6}>
    <div className='BtnAnimation'>
-      <Link to="./GRKingsCup.js">
+      <Link to="/GRKingsCup.js">
    <GameRulesBtn/>
    </Link>
    </div>
+   </Grid>
+   <Grid item ={6}>
    <div className='BtnAnimation'>
-     <Link to="./CAKingsCup.js">
+     <Link to="/CAKingsCup.js">
    <CardRulesBtn/>
    </Link>
     </div>
+    </Grid>
+    </Grid>
     </div>
   );
 }
+
 //----------------------------------------------------------------//
 //*Notes* Dupe Component?//
 {/* <Accordion

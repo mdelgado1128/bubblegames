@@ -9,7 +9,8 @@ import Grid from '@material-ui/core/Grid';
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
 import WYNBtn from "../Components/WYNBtn";
-import GameRulesBtn from "../Components/GameRulesBtn"
+import GameRulesBtn from "../Components/GameRulesBtn";
+import {Link} from "react-router-dom";
 
 import Scores from "../Components/scores";
 
@@ -82,16 +83,24 @@ export default function QuartersAcc() {
   };
   
   return (
-    <div className="App">
-   
-      <Grid container direction="column">
-      < Scores />
-<WYNBtn/>
-<GameRulesBtn/>
-
-
-      </Grid>
-    </div>
+    <div className wrapper>
+    <Grid container direction='column' spacing={2} alignItems='center'>
+    <Grid item ={6}>
+  <div className='BtnAnimation'>
+    <Link to="./WNQuarters.js">
+ <WYNBtn/>
+ </Link>
+ </div>
+ </Grid>
+ <Grid item ={6}>
+ <div className='BtnAnimation'>
+    <Link to="/GRQuarters.js">
+ <GameRulesBtn/>
+ </Link>
+ </div>
+ </Grid>
+  </Grid>
+  </div>
   )
 };
 //----------------------------------------------------------//

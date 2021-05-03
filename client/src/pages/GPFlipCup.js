@@ -10,6 +10,7 @@ import { useHistory } from "react-router-dom";
 import API from "../utils/API";
 import WYNBtn from '../Components/WYNBtn';
 import GameRulesBtn from '../Components/GameRulesBtn';
+import {Link} from "react-router-dom";
 
 //--------------------------------------------//
 //--------------STYLING-----------------------//
@@ -82,49 +83,24 @@ export default function FlipCupAcc() {
 
   return (    
   
-<div>
-       <Grid container direction="column">
-      <Grid item xs={12}>
-
+<div className wrapper>
+<Grid container direction='column' spacing={2} alignItems='center'>
+<Grid item ={6}>
+<div className='BtnAnimation'>
+<Link to="./WNFlipCup.js">
 <WYNBtn/>
+</Link>
+</div>
+</Grid>
+<Grid item ={6}>
+<div className='BtnAnimation'>
+<Link to="/GRFlipCup.js">
 <GameRulesBtn/>
-      {/* <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>What you'll need</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            1-2 or more players
-            <br />
-            Plastic cups and a table/ countertop.
-            <br />
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Instructions</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Place penalty drink"(loser(s) will have to drink this.)"
-            <br />
-            While the plastic cup barely hangs off the edge, 
-            <br />
-            Players/teams take turns flipping cups 180 degrees into the upside down position
-            <br />
-            Losing player/team takes the penalty
-            <br/>
-            Variations of the game may include a line of cups for each team,
-            <br />
-            Winner is declared upon correctly flipping all their cups in onto the upside down position. 
-          </Typography>
-        </AccordionDetails>
-      </Accordion> */}
-      </Grid>
-      </Grid>
-      
-    </div>
+</Link>
+</div>
+</Grid>
+</Grid>
+</div>
     
   )
 };

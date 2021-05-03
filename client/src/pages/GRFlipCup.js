@@ -14,7 +14,7 @@ import Paper from "@material-ui/core";
 //----------------------------------------------//
 
 // //------------Export Kings Cup Game Rules------------------//
-export default function GRKingsCup() {
+export default function GRFlipCup() {
   const [expanded, setExpanded] = React.useState("panel1");
   let history = useHistory();
   useEffect(() => {

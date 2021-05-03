@@ -11,6 +11,7 @@ import API from "../utils/API";
 import CardRulesBtn from "../Components/CardRulesBtn";
 import GameRulesBtn from "../Components/GameRulesBtn";
 import WYNBtn from "../Components/WYNBtn";
+import {Link} from "react-router-dom";
 //----------------------------------------------//
 //--------------STYLING-------------------------//
 //------------Material UI joe-------------------//
@@ -82,17 +83,23 @@ export default function BeerPongAcc() {
   };
   
   return (
-    <div className="App">
-      <Grid container direction="column" spacing={2}>
-
-
-<WYNBtn/>
-<GameRulesBtn/>
-
-
-
-
-      </Grid>
+    <div className wrapper>
+    <Grid container direction='column' spacing={2} alignItems='center'>
+    <Grid item ={6}>
+    <div className='BtnAnimation'>
+    <Link to="./WNBeerPong.js">
+    <WYNBtn/>
+    </Link>
+    </div>
+    </Grid>
+    <Grid item ={6}>
+    <div className='BtnAnimation'>
+    <Link to="/GRBeerPong.js">
+    <GameRulesBtn/>
+    </Link>
+    </div>
+    </Grid>
+    </Grid>
     </div>
 
 )
