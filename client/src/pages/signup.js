@@ -17,7 +17,11 @@ import API from "../utils/API";
 //import { useHistory } from "react-router-dom"
 // import { Divider } from '@material-ui/core';
 import '../App.css';
+<<<<<<< HEAD
 // import Alert from '@material-ui/lab/Alert';
+=======
+
+>>>>>>> e6f7a429f036ee913d7c76420021a28e6fe1b10f
 // import ButtonPageStepper from '../Components/Stepper';
 
 

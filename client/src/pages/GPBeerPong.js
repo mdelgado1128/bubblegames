@@ -8,6 +8,11 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
+import CardRulesBtn from "../Components/CardRulesBtn";
+import GameRulesBtn from "../Components/GameRulesBtn";
+import WYNBtn from "../Components/WYNBtn";
+import {Link} from "react-router-dom";
+import Paper from "@material-ui/core/Paper";
 //----------------------------------------------//
 //--------------STYLING-------------------------//
 //------------Material UI joe-------------------//
@@ -72,91 +77,100 @@ export default function BeerPongAcc() {
     }
     userAuth();
   }, );
-
-
+  
+  
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
-
+  
   return (
-    <div className="App">
-      <Grid container direction="column" spacing={2}>
-     
-      <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography>What you'll need</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            2 or 4 players
-            <br />
-            Equipment
-            <br/>
-            The most common cups used are 18-US-fluid-ounce disposable plastic cup with ridge-lines which can
-            <br/>
-            be used precisely to measure the amount of beer to be poured into the cup. On each side of the table,
-            <br/>
-            teams assemble equilateral triangles with a convergence point focusing on the other team.
-            <br/>
-            Games typically use ten cups. Each team usually also has a separate cup of water used to rinse off the ball.
-            <br/>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography>Instructions</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            *rules are directly from wikipedia
-            <br/>
-            Teams
-            <br/>
-            Beer pong is usually played with two teams of two to four players each.
-            <br/>
-            Each team begins the game by standing at either end of the table behind their rack of cups.
-            <br/>
-            Playing field
-            <br/>
-            Although the game is typically played on either a ping pong table or a folding banquet table, 
-            <br/>
-            enthusiasts may create a personalized table for use by friends and visitors.
-            <br/> 
-            In general, this will be a plywood board cut to proper size, sometimes painted with sports, school,
-            <br/> 
-            or fraternity symbols and given a liquid-proof coating. Some companies sell tables,
-            <br/>
-            including portable and inflatable tables.However, the game can be played on any flat surface.
-            <br/>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion square expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography>Typical drink choice</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          Alcohol
-            <br/>
-            An inexpensive pale lager or light beer of 3.2–5% ABV is sometimes preferred because of the large quantities 
-            <br/>
-            consumed during the course of several games. Sometimes under house rules, 
-            <br/>
-            there might be cups of other liquors used during the game. For non-drinkers, the game may be played without beer, 
-            <br/>
-            as is done at Utah State University, where alcohol is not allowed on campus; root beer is used instead.
-            <br/>
-            For sanitary reasons, the game may also be played with cups of water that players do not drink from, 
-            <br/>
-            instead drinking from a separate cup of beer or alcohol.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      </Grid>
+    <div className wrapper>
+    <Grid container direction='column' spacing={2} alignItems='center'>
+    <Grid item ={6}>
+    <div className='BtnAnimation'>
+    <WYNBtn/>
     </div>
-  )
-};
-//-------------------------------------------//
-//*Notes* 2 of same component?//
+    <div>
+            <Paper variant="outlined">
+            <Typography>
+<h4>Beer Pong Players & Equipment</h4> 
+Two teams each consisting of two people
+8’ x 2’ beer pong table (or any level playing surface) 
+(22) plastic cups (10 per team and 2 water cups)
+Ping-pong balls (you need at least 2, but the more the better)
+Beer (or another tasty beverage)
+
+
+      <h4>Beer Pong Tables</h4>
+If you’re wanting to play by ‘official’ rules, your beer pong table should by 8’ x 2’. However, any flat surface will do. 
+
+<h4>Beer Pong Cups</h4>
+Standard beer pong party cups are 16 oz, but that doesn’t mean you shouldn’t supersize the fun. KegWorks has party cups in 36 oz.
+    </Typography>
+            </Paper>
+    </div>
+    </Grid>
+    <Grid item ={6}>
+    <div className='BtnAnimation'>
+    <GameRulesBtn/>
+    </div>
+    <div>
+            <Paper variant="outlined">
+            <Typography>
+              <h4>Setup</h4>
+            At each end of your beer pong table, arrange ten cups in a pyramid-like formation. Fill each cup with your desired amount of beverage.
+            If you’re wanting to play by ‘official’ rules, your beer pong table should by 8’ x 2’. However, any flat surface will do. 
+            Standard beer pong party cups are 16 oz, but that doesn’t mean you shouldn’t supersize the fun. KegWorks has party cups in 36 oz.
+            Start Your Beer Pong Game
+One player from each team is selected to take an initial throw to determine which team goes first in the actual game.
+
+While looking each other in the eye, the chosen opposing players count to three and take their throw at the same time. If only one of them makes the shot, their team goes first. If they both make or miss their shot, players go again. (If this is all too complicated for your group, just flip a coin!)
+
+After the first game, the winning team gets the first throw.
+
+<h4>Turns</h4>
+Each beer pong team shoots twice per turn; each player taking one shot. If both players make their shot, “throwbacks” are given, and that team receives another turn.
+
+<h4>Shooting</h4>
+The ball can be tossed or bounced into the cup. A tossed ball that sinks is worth one cup (the cup it lands in). A bounced shot that sinks is worth two cups (the one in which the shot was made and another from the pyramid)*
+
+*There’s a catch: the defending (non-throwing) team may block a bounced ball once it hits the table, whereas tossed shots are indefensible.
+
+<h4>Sinking Cups</h4>
+A beer pong cup is “sunk” as soon as the ball touches the contents of the cup. Any cup that is sunk must be immediately removed from the table and the defending team is responsible for drinking its contents. Team members alternate drinking.
+
+Warning: Watch your cups that have been sunk but are left undrank. If the opposing team sinks a ball in the cup you’re drinking from, it’s game over.
+
+If one cup is sunk, and the next player shoots, hitting the same cup, that also ends the game. Any cups accidentally knocked over are considered sunk.
+
+<h4>Re-Racking & Formations</h4> 
+A team is allowed to request a “re-rack” at the end of a turn, in order to maintain a compact shape.
+
+Each team gets two re-racks per game, which can be used at almost any time*. The standard beer pong rule is to take one re-rack with 6 cups remaining, and the other when 2 or 3 cups remain. Note: if you’re playing beer pong with 6 cups each – there is one re-rack allowed per team, per game.
+
+*You can not re-rack if you’re shooting during “throwbacks”
+
+*You can not re-rack during a “redemption round” 
+
+<h4>Beer Pong Formations</h4> 
+6 Cup Beer Pong Formations
+Marching (2 rows of 3 cups)
+Triangle (pyramid of 6 cups)
+4 Cup Beer Pong Formations
+Diamond 
+Square
+3 Cup Beer Pong Formations
+Triangle (pyramid of 3 cups)
+Traffic light (single row of 3 cups)
+2 Cup Beer Pong Formations
+Double (single row of 2 cups)
+    
+    </Typography>
+            </Paper>
+    </div>
+    </Grid>
+    </Grid>
+    </div>
+
+)
+}; 

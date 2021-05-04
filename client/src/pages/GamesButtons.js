@@ -9,6 +9,7 @@ import QuartersBtn from '../Components/QuartersBtn';
 import KingsCupBtn from '../Components/KingsCupBtn';
 import BeerPongBtn from '../Components/BeerPongBtn';
 import "../styles/GamesButtons.css";
+import BGLogo from '../Components/Logo';
 
 //--------Export Games Buttons------------//
 export default function GamesButtons(props) {
@@ -36,8 +37,9 @@ export default function GamesButtons(props) {
 
   return (
   
-    <div className wrapper>
+    <div className wrapper> 
         <Grid container direction='column' spacing={2} alignItems='center'>
+          <BGLogo/>
         <Grid/>
    
         <Grid container spacing={2} alignItems='center' direction='column'>
