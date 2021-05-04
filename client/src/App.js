@@ -39,6 +39,7 @@ export default function App() {
   localStorage.clear();
  
   return (
+    
     <Router>
       <div className={classes.particlesBg}>
          
@@ -81,10 +82,8 @@ export default function App() {
     
 
         </div>
-      </div>
-     
+     </div>
     </Router>
-
 
   );
 }
