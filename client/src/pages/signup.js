@@ -13,12 +13,7 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import API from "../utils/API";
-// import axios from 'axios';
-import { useHistory } from "react-router-dom"
-// import { Divider } from '@material-ui/core';
 import '../App.css';
-
-// import ButtonPageStepper from '../Components/Stepper';
 
 
 
