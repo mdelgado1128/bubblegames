@@ -11,7 +11,8 @@ import BeerPongAcc from './pages/GPBeerPong'
 import QuartersAcc from './pages/GPQuarters'
 import FlipcupAcc from './pages/GPFlipCup'
 import ParticlesBg from 'particles-bg';
-import SideBar from './Components/SideBar'
+import SideBar from './Components/SideBar';
+import BackArrowBtn from './Components/BackArrowBtn';
 
 import BGLogo from './Components/Logo'
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -42,19 +43,16 @@ export default function App() {
       <div className={classes.particlesBg}>
          
       <ParticlesBg type="circle" bg={true} />
+          </div>
        
-       <SideBar />
 
    <div className="App"> 
+      <div className='BtnAnimation'>
+       <BackArrowBtn />
+      </div>    
         
-        
-       <div className={classes.root}> 
-         
-       
-          
-    
-          
-            
+    <div className={classes.root}> 
+                     
             <Switch>
               <Route exact path="/Login">
                 <Login />
@@ -82,7 +80,6 @@ export default function App() {
           
     
 
-          </div>
         </div>
       </div>
      
