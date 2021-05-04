@@ -5,8 +5,11 @@
     cursor:pointer;
 }
 .BtnAnimation:hover{
-    animation: pop 0.3s linear 1;
+    animation: pop 0.2s linear 1;
 } 
 @keyframes pop{
-  50%  {transform: scale(1.2);}
+  50%  {transform: scale(1.1);}
 } 
+Paper {
+    max-width: 120px;
+}

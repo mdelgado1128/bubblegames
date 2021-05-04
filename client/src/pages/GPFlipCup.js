@@ -12,6 +12,7 @@ import WYNBtn from '../Components/WYNBtn';
 import GameRulesBtn from '../Components/GameRulesBtn';
 import {Link} from "react-router-dom";
 import Paper from "@material-ui/core/Paper"
+import "../styles/GamesButtons.css"
 
 //--------------------------------------------//
 //--------------STYLING-----------------------//
@@ -103,13 +104,14 @@ export default function FlipCupAcc() {
             </Paper>
     </div>
 </Grid>
-<Grid item ={6}>
+<Grid item xs={12}>
 <div className='BtnAnimation'>
-
 <GameRulesBtn/>
 </div>
+</Grid>
+<Grid item xs={6}>
 <div>
-            <Paper variant="outlined">
+            <Paper  variant="outlined">
             <Typography>
       <h4>Flip Cup</h4>
       Two teams of an equal number of players stand on opposite sides of a table, facing one another. The players directly facing are opponents. In front of each teammate is a disposable plastic cup filled with a set amount of beer. Generally, the first line inside a disposable cup is used as a marker.

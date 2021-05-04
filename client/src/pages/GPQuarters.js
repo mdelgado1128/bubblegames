@@ -86,10 +86,12 @@ export default function QuartersAcc() {
   return (
     <div className wrapper>
     <Grid container direction='column' spacing={2} alignItems='center'>
-    <Grid item ={6}>
+    <Grid item xs={12}>
   <div className='BtnAnimation'>
  <WYNBtn/>
  </div>
+ </Grid>
+    <Grid item ={6}>
  <div>
             <Paper variant="outlined">
             <Typography>
@@ -102,10 +104,12 @@ export default function QuartersAcc() {
             </Paper>
     </div>
  </Grid>
- <Grid item ={6}>
+ <Grid item xs={12}>
  <div className='BtnAnimation'>
  <GameRulesBtn/>
  </div>
+ </Grid>
+ <Grid item ={6}>
  <div>
             <Paper variant="outlined">
             <Typography>
