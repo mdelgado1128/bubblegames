@@ -47,16 +47,12 @@ export default function App() {
        
 
    <div className="App"> 
+      <div className='BtnAnimation'>
        <BackArrowBtn />
+      </div>    
         
-        
-       <div className={classes.root}> 
-         
-       
-          
-    
-          
-            
+    <div className={classes.root}> 
+                     
             <Switch>
               <Route exact path="/Login">
                 <Login />
