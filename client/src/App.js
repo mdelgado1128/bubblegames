@@ -11,10 +11,9 @@ import BeerPongAcc from './pages/GPBeerPong'
 import QuartersAcc from './pages/GPQuarters'
 import FlipcupAcc from './pages/GPFlipCup'
 import ParticlesBg from 'particles-bg';
-import SideBar from './Components/SideBar'
-
-import BGLogo from './Components/Logo'
-import CssBaseline from '@material-ui/core/CssBaseline';
+// import SideBar from './Components/SideBar'
+// import BGLogo from './Components/Logo'
+// import CssBaseline from '@material-ui/core/CssBaseline';
 //-----------------------------------------------//
 //----------------STYLING------------------------//
 //--------Material UI joe------------------------//
@@ -41,9 +40,8 @@ export default function App() {
     <Router>
       <div className={classes.particlesBg}>
          
-      <ParticlesBg type="circle" bg={true} />
-       
-       <SideBar />
+       <ParticlesBg type="circle" bg={true} />
+      </div>
 
    <div className="App"> 
         
@@ -84,7 +82,6 @@ export default function App() {
 
           </div>
         </div>
-      </div>
      
     </Router>
 
