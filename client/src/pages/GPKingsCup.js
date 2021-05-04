@@ -56,12 +56,14 @@ export default function KingsCupAcc() {
             </Paper>
     </div>
    </Grid>
-   <Grid item ={6}>
+   <Grid item xs={12}>
    <div className='BtnAnimation'>
 
    <GameRulesBtn/>
 
    </div>
+   </Grid>
+   <Grid item xs={6}>
    <div>
             <Paper variant="outlined">
             <Typography>
@@ -83,7 +85,7 @@ export default function KingsCupAcc() {
 
     </div>
     </Grid>
-   <Grid item ={6}>
+   <Grid item xs={6}>
     <div>
             <Paper variant="outlined">
               <h2>Card Assignments</h2>
