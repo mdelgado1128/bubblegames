@@ -4,7 +4,7 @@ import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Login from "./pages/Login";
 import SignUp from "./pages/signup";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import GamesButtons from './pages/GamesButtons'
 import KingsCupAcc from './pages/GPKingsCup'
 import BeerPongAcc from './pages/GPBeerPong'
@@ -50,6 +50,7 @@ export default function App() {
    <div className="App"> 
       <div className='BtnAnimation'>
        <BackArrowBtn />
+
       </div>    
         
     <div className={classes.root}> 
