@@ -11,6 +11,7 @@ import API from "../utils/API";
 import WYNBtn from "../Components/WYNBtn";
 import GameRulesBtn from "../Components/GameRulesBtn";
 import {Link} from "react-router-dom";
+import Paper from "@material-ui/core/Paper";
 
 import Scores from "../Components/scores";
 
@@ -87,17 +88,41 @@ export default function QuartersAcc() {
     <Grid container direction='column' spacing={2} alignItems='center'>
     <Grid item ={6}>
   <div className='BtnAnimation'>
-    <Link to="./WNQuarters.js">
  <WYNBtn/>
- </Link>
  </div>
+ <div>
+            <Paper variant="outlined">
+            <Typography>
+        "Players: 2+ (More the merrier!)"
+        <br />
+        Quarters.
+        <br />
+        Tall, large mouthed glass.
+      </Typography>
+            </Paper>
+    </div>
  </Grid>
  <Grid item ={6}>
  <div className='BtnAnimation'>
-    <Link to="/GRQuarters.js">
  <GameRulesBtn/>
- </Link>
  </div>
+ <div>
+            <Paper variant="outlined">
+            <Typography>
+            Place penalty drink"(loser(s) will have to drink this.)"
+            <br />
+            While the plastic cup barely hangs off the edge, 
+            <br />
+            Players/teams take turns flipping cups 180 degrees into the upside down position
+            <br />
+            Losing player/team takes the penalty
+            <br/>
+            Variations of the game may include a line of cups for each team,
+            <br />
+            Winner is declared upon correctly flipping all their cups in onto the upside down position. 
+          </Typography>
+            </Paper>
+    </div>
  </Grid>
   </Grid>
   </div>
